@@ -5,5 +5,7 @@ this is aproject that aims abou the concept AirBnB_clone
 
 The goal of this project is to build a basic clone of the AirBnB platform, starting with a command interpreter that allows for object creation, modification, and destruction.
 
+my  Name <kayiranga  ikirezi frida>
 
+#     frida ikirezi kayiranga <f.kayiranga@alustudent.com>
 
