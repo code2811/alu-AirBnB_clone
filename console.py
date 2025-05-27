@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""Command interpreter entry point"""
+
 import cmd
+import models
 
 class HBNBCommand(cmd.Cmd):
     prompt = '(hbnb) '
@@ -14,6 +17,7 @@ class HBNBCommand(cmd.Cmd):
         return True
 
     def emptyline(self):
+        """Do nothing on empty input"""
         pass
 
 if __name__ == '__main__':
