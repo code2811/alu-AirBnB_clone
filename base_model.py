@@ -29,21 +29,18 @@ class BaseModel:
 
     def __str__(self):
         """String representation of BaseModel"""
-        return "[{}] ({}) {}".format(
-            self.__class__.__name__,
-            self.id,
-            self.__dict__
-        )
+        return "[{}] ({}) {}".format(self.__class__.__name__, self.id, self.__dict__)
 
     def save(self):
-        """Update the updated_at timestamp and save to storage"""
+        """Updates the public instance attribute updated_at with current datetime"""
         self.updated_at = datetime.now()
         models.storage.save()
 
     def to_dict(self):
-        """Return dictionary representation of the instance"""
-        result = self.__dict__.copy()
-        result['__class__'] = self.__class__.__name__
-        result['created_at'] = self.created_at.isoformat()
-        result['updated_at'] = self.updated_at.isoformat()
-        return result
+        """Returns a dictionary containing all keys/values of the instance"""
+        dict_rep = self.__dict__.copy()
+        dict_rep['__class__'] = self.__class__.__name__
+        dict_rep['created_at'] = self.created_at.isoformat()
+        dict_rep['updated_at'] = self.updated_at.isoformat()
+        return dict_rep
+
